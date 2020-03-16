@@ -12,5 +12,6 @@ To deploy you will need an AWS account and your credentials properly configured.
 ```shell script
 export AWS_ACCESS_KEY_ID=<your-key-here>
 export AWS_SECRET_ACCESS_KEY=<your-secret-key-here>
+serverless plugin install -n serverless-python-requirements
 serverless deploy -v
 ```

@@ -55,28 +55,12 @@ environment:
 #    - exclude-me-dir/**
 
 functions:
-  upload:
-    handler: upload.uploadHandler
+  hello_world:
+    handler: hello_world.handler
     timeout: 30
     events:
       - http:
-          path: upload
-          method: post
-  train:
-    handler: train.trainHandler
-    timeout: 30
-    memory: 3008
-    events:
-      - http:
-          path: train
-          method: post
-          async: true
-  infer:
-    handler: infer.inferHandler
-    timeout: 30
-    events:
-      - http:
-          path: infer
+          path: hello-world
           method: post
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
@@ -141,39 +125,30 @@ package:
 
 custom:
   pythonRequirements:
+    dockerizePip: true
     fileName: requirements-serverless.txt
     zip: true
     slim: true
-    slimPatternsAppendDefaults: false
     slimPatterns:
-      - 'tensorboard/**'
-      - 'jmespath/**'
-      - 'botocore/**'
-      - 'google/**'
-      - 'google_auth_oauthlib/**'
-      - 'grpc/**'
-      - 'markdown/**'
-      - 'oauthlib/**'
-      - 'scipy/**'
-      - 'six/**'
+      - 'tensorboard'
+      - 'tensorflow_core/include'
+      - 'tensorflow_core/examples'
+      - "tensorflow_core/contrib"
+      - "tensorflow_estimator"
+      - 'setuptools'
+      - "debug"
+      - "h5py"
+      - "markdown"
+      - "**/pkg_resources"
+      - "setuptools"
+      - "werkzeug"
+      - "wheel"
+      - 'jmespath'
+      - 'botocore'
+      - 'grpc'
+      - 'scipy'
+      - 'six'
       - '**/tests/*'
       - "**/!(lib_name*)*.dist-info/*"
       - '**/*.py[c|o]'
       - '**/__pycache__*'
-    noDeploy:
-      - boto3
-      - botocore
-      - google-auth
-      - google-auth-oauthlib
-      - google-pasta
-      - Markdown
-      - oauthlib
-      - protobuf
-      - scipy
-      - docutils
-      - jmespath
-      - pip
-      - python-dateutil
-      - setuptools
-      - six
-      - tensorboard
