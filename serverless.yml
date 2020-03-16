@@ -141,8 +141,25 @@ package:
 
 custom:
   pythonRequirements:
+    fileName: requirements-serverless.txt
     zip: true
     slim: true
+    slimPatternsAppendDefaults: false
+    slimPatterns:
+      - 'tensorboard/**'
+      - 'jmespath/**'
+      - 'botocore/**'
+      - 'google/**'
+      - 'google_auth_oauthlib/**'
+      - 'grpc/**'
+      - 'markdown/**'
+      - 'oauthlib/**'
+      - 'scipy/**'
+      - 'six/**'
+      - '**/tests/*'
+      - "**/!(lib_name*)*.dist-info/*"
+      - '**/*.py[c|o]'
+      - '**/__pycache__*'
     noDeploy:
       - boto3
       - botocore
