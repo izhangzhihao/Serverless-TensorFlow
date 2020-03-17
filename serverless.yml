@@ -133,7 +133,6 @@ custom:
       - 'tensorboard'
       - 'tensorflow_core/include'
       - 'tensorflow_core/examples'
-      - "tensorflow_core/contrib"
       - "tensorflow_estimator"
       - 'setuptools'
       - "debug"
@@ -144,6 +143,7 @@ custom:
       - "werkzeug"
       - "wheel"
       - 'jmespath'
+      - 'boto3'
       - 'botocore'
       - 'grpc'
       - 'scipy'

@@ -9,5 +9,4 @@ import tensorflow as tf
 
 def handler(event, context):
     helloworld = tf.constant("hello, TensorFlow")
-
-    return {'Tensor': helloworld, 'Value': str(np.shape([1, 2, 3, 4]))}
+    return {'Tensor': helloworld.numpy().decode("utf-8"), 'Value': str(np.shape([1, 2, 3, 4]))}
