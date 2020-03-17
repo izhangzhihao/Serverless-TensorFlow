@@ -122,12 +122,14 @@ package:
     - "**"
   include:
     - "**.py"
+    - "**.tflite"
+    - "**.bmp"
+    - "labels.txt"
 
 custom:
   pythonRequirements:
     dockerizePip: true
     fileName: requirements-serverless.txt
-    zip: true
     slim: true
     slimPatterns:
       - 'tensorboard'

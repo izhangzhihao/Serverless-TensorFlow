@@ -1,5 +1,4 @@
-tensorflow-cpu==2.1.0
+tflite==2.1.0
 numpy==1.18.1
-google-auth==1.11.3
-google-auth-oauthlib==0.4.1
-google-pasta==0.2.0
+https://dl.google.com/coral/python/tflite_runtime-2.1.0.post1-cp37-cp37m-linux_x86_64.whl
+Pillow==7.0.0
