@@ -13,6 +13,8 @@ To deploy you will need an AWS account and your credentials properly configured.
 export AWS_ACCESS_KEY_ID=<your-key-here>
 export AWS_SECRET_ACCESS_KEY=<your-secret-key-here>
 serverless plugin install -n serverless-python-requirements
+serverless package
+serverless deploy -v -p .serverless/serverless-tensorflow.zip
 serverless deploy -v
 serverless invoke local -f hello_world -l
 ```

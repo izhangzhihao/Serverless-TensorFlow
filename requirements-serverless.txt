@@ -1,4 +1,4 @@
 tflite==2.1.0
 numpy==1.18.1
-https://dl.google.com/coral/python/tflite_runtime-2.1.0.post1-cp37-cp37m-linux_x86_64.whl
+https://gist.github.com/izhangzhihao/a092023fb259437879c54dcf0505369e/raw/b1050625de48386ee94828bd239bde14f878713f/tflite_runtime-2.1.0-cp37-cp37m-linux_x86_64.whl
 Pillow==7.0.0
