@@ -1,4 +1,4 @@
-tensorflow-cpu==2.4.0
+tensorflow-cpu==2.5.3
 numpy==1.18.1
 google-auth==1.11.3
 google-auth-oauthlib==0.4.1
